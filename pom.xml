@@ -57,7 +57,7 @@
         </repository>
         <repository>
           <id>addstar-snapshot-repo</id>
-          <url>http://maven.addstar.com.au/artifactory/ext-snapshot-local</url>
+          <url>http://maven.addstar.com.au/artifactory/all-snapshot</url>
           <snapshots>
           	<enabled>true</enabled>
           </snapshots>
@@ -72,6 +72,12 @@
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>${spigot.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>net.md-5</groupId>
+                    <artifactId>bungeecord-chat</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
     <build>

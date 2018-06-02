@@ -34,7 +34,7 @@ public class SpawnMessageListener implements PluginMessageListener, Listener {
                     String name = null;
                     try {
                         name = in.readUTF();
-                    } catch ( IOException e ) {
+                    } catch ( IOException ignored ) {
                     }
                     if ( name != null ) {
                         Player p = Bukkit.getPlayer( name );
