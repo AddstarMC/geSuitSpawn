@@ -12,20 +12,21 @@ import java.util.Iterator;
 
 
 public class PluginMessageTask extends BukkitRunnable {
-    
+
 	private final ByteArrayOutputStream bytes;
 
 	public PluginMessageTask(ByteArrayOutputStream bytes) {
 		this.bytes = bytes;
 	}
-	
+
+    @Override
 	public void run() {
 	    Iterator<? extends Player> iterator = Bukkit.getOnlinePlayers().iterator();
         if (iterator.hasNext()) {
             Player player = iterator.next();
 				player.sendPluginMessage(
 						geSuitSpawn.INSTANCE,
-						"geSuitSpawns",
+						"bungeecord:geSuitSpawns",
 						bytes.toByteArray());
 			} else {
 				System.out.println(ChatColor.RED + "Unable to send Plugin Message - No players online.");
