@@ -4,6 +4,7 @@ version: ${plugin.version}
 description: Part of the geSuit (gesuit) this plugin allows users to set a proxy wide spawn
 author: geNAZt
 depend: [geSuitTeleports]
+api-version: 1.13
 commands:
     setnewspawn:
         description: Sets the new players spawn point.
