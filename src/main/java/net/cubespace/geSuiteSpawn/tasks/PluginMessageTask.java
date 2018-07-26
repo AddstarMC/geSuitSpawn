@@ -26,7 +26,7 @@ public class PluginMessageTask extends BukkitRunnable {
             Player player = iterator.next();
 				player.sendPluginMessage(
 						geSuitSpawn.INSTANCE,
-						"bungeecord:geSuitSpawns",
+						geSuitSpawn.CHANNEL_NAME,
 						bytes.toByteArray());
 			} else {
 				System.out.println(ChatColor.RED + "Unable to send Plugin Message - No players online.");

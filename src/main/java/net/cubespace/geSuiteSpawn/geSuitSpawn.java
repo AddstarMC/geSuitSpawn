@@ -18,7 +18,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class geSuitSpawn extends JavaPlugin {
 	public static Plugin INSTANCE = null;
-
+	public static String CHANNEL_NAME = "bungeecord:gesuitSpawns";
 	@Override
 	public void onEnable() {
 		INSTANCE = this;
@@ -42,9 +42,9 @@ public class geSuitSpawn extends JavaPlugin {
 
 	private void registerChannels() {
 		Bukkit.getMessenger().registerIncomingPluginChannel(this,
-				"geSuitSpawns", new SpawnMessageListener());
+				CHANNEL_NAME, new SpawnMessageListener());
 		Bukkit.getMessenger().registerOutgoingPluginChannel(this,
-				"geSuitSpawns");
+				CHANNEL_NAME);
 	}
 
 	private void registerListeners() {
