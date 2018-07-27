@@ -18,7 +18,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class geSuitSpawn extends JavaPlugin {
 	public static Plugin INSTANCE = null;
-	public static String CHANNEL_NAME = "bungeecord:gesuitSpawns";
+	public static String CHANNEL_NAME = "bungeecord:gesuitspawns";
 	@Override
 	public void onEnable() {
 		INSTANCE = this;
